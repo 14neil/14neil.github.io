@@ -81,6 +81,13 @@ hr.star-primary:after {
 }
 
 header {
+  display: flex;
+  align-items: center;   /* vertical centering */
+  justify-content: center; /* horizontal centering */
+  flex-direction: column; /* keep items stacked vertically */
+  min-height: 100vh; /* full screen height */
+  text-align: center;
+  color: #fff;
   background: url('/img/background.jpg') no-repeat center center fixed;
   background-size: cover;
 }
