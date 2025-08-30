@@ -38,30 +38,31 @@ h6 {
 
 hr.star-light,
 hr.star-primary {
+    position: relative;          /* needed for :after positioning */
     margin: 25px auto 30px;
-    padding: 0;
-    max-width: 250px;
     border: 0;
     border-top: solid 5px;
-    text-align: center;
-    overflow: visible;
+    max-width: 250px;
 }
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";              /* star icon */
-    display: flex;                 /* make it a flex container */
-    justify-content: center;       /* center horizontally */
-    align-items: center;           /* center vertically */
-    position: relative;
-    top: 50%;                      
-    transform: translateY(-50%);
+    content: "\f005";            /* star icon */
     font-family: FontAwesome;
-    font-size: 1.5em;              
-    width: 2.5em;                  /* fixed width */
-    height: 2.5em;                 /* same as width for circle */
-    border-radius: 50%;            /* circular */
-    line-height: 1;                /* reset line height */
+    font-size: 1.5em;
+    color: #fff;                 /* default color, override below */
+    background-color: #000;      /* default background, override below */
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;          /* absolute positioning relative to HR */
+    left: 50%;                   /* horizontal center */
+    top: 50%;                    /* vertical center of HR */
+    transform: translate(-50%, -50%);  /* perfect center */
 }
 
 hr.star-light {
