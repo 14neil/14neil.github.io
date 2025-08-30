@@ -50,14 +50,18 @@ hr.star-primary {
 hr.star-light:after,
 hr.star-primary:after {
     content: "\f005";              /* star icon */
-    display: inline-block;
+    display: flex;                 /* make it a flex container */
+    justify-content: center;       /* center horizontally */
+    align-items: center;           /* center vertically */
     position: relative;
-    top: 50%;                      /* push it halfway down */
-    transform: translateY(-50%);   /* pull it back up to center */
+    top: 50%;                      
+    transform: translateY(-50%);
     font-family: FontAwesome;
-    font-size: 1.5em;              /* size of the star */
-    padding: 0.4em;                /* space around star */
-    border-radius: 50%;            /* make it a circle */
+    font-size: 1.5em;              
+    width: 2.5em;                  /* fixed width */
+    height: 2.5em;                 /* same as width for circle */
+    border-radius: 50%;            /* circular */
+    line-height: 1;                /* reset line height */
 }
 
 hr.star-light {
