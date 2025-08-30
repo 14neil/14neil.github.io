@@ -52,13 +52,11 @@ hr.star-primary:after {
     content: "\f005";              /* star icon */
     display: inline-block;
     position: relative;
-    top: -0.6em;                   /* adjust vertical alignment */
+    top: 50%;                      /* push it halfway down */
+    transform: translateY(-50%);   /* pull it back up to center */
     font-family: FontAwesome;
-    font-size: 1.2em;              /* star size */
-    width: 2em;                    /* force equal width/height */
-    height: 2em;
-    line-height: 2em;              /* center the star inside */
-    text-align: center;
+    font-size: 1.5em;              /* size of the star */
+    padding: 0.4em;                /* space around star */
     border-radius: 50%;            /* make it a circle */
 }
 
