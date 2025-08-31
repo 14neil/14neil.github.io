@@ -42,22 +42,20 @@ hr.star-primary {
     padding: 0;
     max-width: 250px;
     border: 0;
-    border-top: soid 5px;
+    border-top: solid 5px;
     text-align: center;
     overflow: visible;
 }
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005"; /* star icon */
+    content: "\f005";
     display: inline-block;
     position: relative;
-    top: 50%; /* push it halfway down */
-    transform: translateY(-50%); /* pull it back up to center */
+    top: -.8em;
+    padding: 0 .25em;
     font-family: FontAwesome;
-    font-size: 1.5em; /* size of the star */
-    padding: 0.4em; /* space around star */
-    border-radius: 50%; /* make it a circle */
+    font-size: 2em;
 }
 
 hr.star-light {
@@ -83,15 +81,19 @@ hr.star-primary:after {
 }
 
 header {
-  display: flex;
-  align-items: center;   /* vertical centering */
-  justify-content: center; /* horizontal centering */
-  flex-direction: column; /* keep items stacked vertically */
-  min-height: 100vh; /* full screen height */
-  text-align: center;
-  color: #fff;
-  background: url('/img/background.png') no-repeat center center fixed;
-  background-size: cover;
+    text-align: center;
+    color: #fff;
+    background: #{{ site.color.primary }};
+}
+
+header .container {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+header img {
+    display: block;
+    margin: 0 auto 20px;
 }
 
 header .container {
