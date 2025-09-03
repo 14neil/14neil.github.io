@@ -7,18 +7,21 @@
         <hr class="star-primary">
       </div>
     </div>
-    <div class="portfolio-flex-row" style="display: flex; flex-wrap: nowrap; justify-content: center;">
-      {% for post in site.categories.research %}
-      <div class="portfolio-flex-item portfolio-item" style="flex: 0 0 33.33%; max-width: 33.33%; margin: 15px;">
-        <a href="#researchModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
+
+    <div class="portfolio-flex-row" style="display: flex; flex-wrap: wrap; justify-content: center;">
+      {% for post in site.posts %}
+        {% if post.category == "research" %}
+          <div class="portfolio-flex-item portfolio-item" style="flex: 0 0 33.33%; max-width: 33.33%; margin: 15px;">
+            <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="width: 100%; max-width: 900px; height: auto;">
+            </a>
           </div>
-          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="width: 100%; max-width: 900px; height: auto;">
-        </a>
-      </div>
+        {% endif %}
       {% endfor %}
     </div>
   </div>
