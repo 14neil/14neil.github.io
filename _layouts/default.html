@@ -6,23 +6,25 @@
   {% include nav.html %}
   {% include header.html %}
 
-  <!-- Research Section -->
+  <!-- Grids for Research, Teaching, Mentoring -->
   {% include research_grid.html %}
-  {% include research_modals.html %}
-
-  <!-- Teaching Section -->
   {% include teaching_grid.html %}
-  {% include teaching_modals.html %}
-
-  <!-- Mentoring Section -->
   {% include mentoring_grid.html %}
-  {% include mentoring_modals.html %}
 
-  <!-- About Me Section -->
   {% include about_me.html %}
 
+  {% comment %}
+  {% if site.contact == "static" %}
+  {% include contact_static.html %}
+  {% elsif site.contact == "disqus" %}
+  {% include contact_disqus.html %}
+  {% else %}
+  {% include contact.html %}
+  {% endif %}
+  {% endcomment %}
+
   {% include footer.html %}
+  {% include modals.html %}
   {% include js.html %}
 </body>
-
 </html>
