@@ -195,29 +195,39 @@ section.success {
     }
 }
 
-/* Portfolio-like grid for all sections */
+/* Portfolio-like grid for Research/Teaching/Mentoring */
 .portfolio-flex-grid .portfolio-flex-row {
     display: flex;
-    flex-wrap: wrap;              /* allow wrapping if needed */
-    justify-content: center;      /* center the row content */
-    gap: 30px;                    /* consistent spacing */
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: 20px;
 }
 
 .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-    flex: 0 0 30%;                 /* 3 items per row */
-    max-width: 30%;
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
+    margin: 0;
 }
 
-@media (max-width: 991px) {
+.portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-        flex: 0 0 45%;             /* 2 items per row on tablets */
-        max-width: 45%;
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
     }
 }
 
 @media (max-width: 600px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-        flex: 0 0 100%;            /* 1 item per row on mobile */
+        flex: 1 1 100%;
         max-width: 100%;
     }
 }
@@ -227,7 +237,7 @@ section.success {
     display: block;
     position: relative;
     margin: 0 auto;
-    max-width: 400px;
+    max-width: 100%;
 }
 
 .portfolio-item .portfolio-link .caption {
@@ -252,12 +262,12 @@ section.success {
     width: 100%;
     text-align: center;
     transform: translate(-50%, -50%);
-    font-size: 20px;
+    font-size: 1.5em;
     color: #fff;
 }
 
 .portfolio-item .portfolio-link .caption .caption-content i {
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .portfolio-item .portfolio-link .caption .caption-content h3,
@@ -437,5 +447,5 @@ footer .footer-below {
 }
 
 .navbar-nav>.active>a {
-    background-color: #{{ site.color.secondary-dark }} !
+    background-color: #{{ site.color.secondary-dark }} !important;
 }
