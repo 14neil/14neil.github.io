@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 6
+date: 2025-09-04
+img: bas_cover.jpg
+alt: bas_ss.png
+project-date: Fall 2023, 2024
+client: Start Bootstrap
+category: mentoring
+description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
+---
