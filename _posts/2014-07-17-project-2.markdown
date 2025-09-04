@@ -3,7 +3,7 @@ layout: default
 modal-id: 2
 date: 2014-07-17
 img: tde.jpg
-alt: collage.jpg
+alt: 15oi_LC.png
 project-date: April 2014
 client: Start Bootstrap
 category: research
