@@ -3,7 +3,7 @@ layout: default
 modal-id: 4
 date: 2025-09-04
 img: jwst.png
-alt: collage.jpg
+alt: c10_collage.jpg
 project-date: Fall 2023, 2024
 client: Start Bootstrap
 category: teaching
