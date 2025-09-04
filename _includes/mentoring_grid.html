@@ -7,18 +7,17 @@
         <hr class="star-primary">
       </div>
     </div>
-
-    <div class="portfolio-flex-row" style="display: flex; flex-wrap: wrap; justify-content: center;">
+    <div class="portfolio-flex-row">
       {% for post in site.posts %}
         {% if post.category == "mentoring" %}
-          <div class="portfolio-flex-item portfolio-item" style="flex: 0 0 33.33%; max-width: 33.33%; margin: 15px;">
+          <div class="portfolio-flex-item portfolio-item">
             <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus"></i>
                 </div>
               </div>
-              <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}" style="width: 100%; max-width: 900px; height: auto;">
+              <img src="img/portfolio/{{ post.img }}" class="img-fluid d-block mx-auto" alt="{{ post.alt }}">
             </a>
           </div>
         {% endif %}
