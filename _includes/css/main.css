@@ -205,8 +205,8 @@ section.success {
 }
 
 .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-    flex: 1 1 calc(33.33% - 30px);
-    max-width: calc(33.33% - 30px);
+    flex: 1 1 calc(50% - 50px);
+    max-width: calc(50% - 50px);
     margin: 0;
 }
 
