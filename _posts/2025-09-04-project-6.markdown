@@ -2,7 +2,7 @@
 layout: default
 modal-id: 6
 date: 2025-09-04
-img: bas_cover.jpg
+img: bas_cover.png
 alt: bas_ss.png
 project-date: Fall 2023, 2024
 client: Start Bootstrap
