@@ -11,13 +11,13 @@
       {% for post in site.posts %}
         {% if post.category == "research" %}
           <div class="portfolio-flex-item portfolio-item">
-            <a href="#researchModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+            <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
+                  <i class="fa fa-search-plus"></i>
                 </div>
               </div>
-              <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+              <img src="img/portfolio/{{ post.img }}" class="img-fluid d-block mx-auto" alt="{{ post.alt }}">
             </a>
           </div>
         {% endif %}
