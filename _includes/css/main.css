@@ -197,6 +197,7 @@ section.success {
 
 /* Portfolio-like grid for Research/Teaching/Mentoring */
 .portfolio-flex-grid .portfolio-flex-row {
+    max-width: 1500px
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
@@ -205,8 +206,8 @@ section.success {
 }
 
 .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
-    flex: 1 1 calc(40% - 40px);
-    max-width: calc(40% - 40px);
+    flex: 1 1 calc(33.33% - 30px);
+    max-width: calc(33.33% - 30px);
     margin: 0;
 }
 
