@@ -211,7 +211,7 @@ section.success {
 }
 
 .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item img {
-    width: 125%;
+    width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
