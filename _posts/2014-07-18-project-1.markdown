@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Stripped-Envelop Supernova
+title: Stripped-Envelope Supernova
 modal-id: 1
 date: 2014-07-18
 img: supernova.jpg
