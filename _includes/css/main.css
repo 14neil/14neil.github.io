@@ -6,6 +6,8 @@
 
 body {
     overflow-x: hidden;
+    background: url('/img/background.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 p {
@@ -88,8 +90,6 @@ header {
     min-height: 100vh;
     text-align: center;
     color: #fff;
-    background: url('/img/background.png') no-repeat center center fixed;
-    background-size: cover;
 }
 
 header .container {
@@ -173,6 +173,7 @@ header .intro-text .welcome {
 
 section {
     padding: 100px 0;
+    background: transparent;
 }
 
 section h2 {
@@ -193,6 +194,12 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+/*Overlay to make the sections stand out over the background */
+#research, #teaching, #mentoring {
+    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    color: #fff;
 }
 
 /* Portfolio-like grid for Research/Teaching/Mentoring */
