@@ -198,9 +198,10 @@ section.success {
 
 /*Overlay to make the sections stand out over the background */
 #research, #teaching, #mentoring {
-    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    /*background: rgba(0, 0, 0, 0.6); /* dark overlay */
     color: #fff;
 }
+-->
 
 /* Portfolio-like grid for Research/Teaching/Mentoring */
 .portfolio-flex-grid .portfolio-flex-row {
