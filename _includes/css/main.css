@@ -60,6 +60,28 @@ hr.moon_new:after {
   background-size: contain;
 }
 
+hr.moon_wc {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
+  overflow: visible;
+  border-color: #B2862E; /* line color – adjust if needed */
+}
+
+hr.moon_wc:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -1.8em;             /* lifts moon above line */
+  width: 48px;             /* adjust size */
+  height: 48px;
+  background: url("img/moon_wc.png") no-repeat center center;
+  background-size: contain;
+}
+
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
