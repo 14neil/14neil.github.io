@@ -184,7 +184,7 @@ hr.star-primary {
 }
 
 hr.star-primary:after {
-    color: #fff;
+    color: #{{ site.color.gold }};
     background-color: #{{ site.color.primary }};
 }
 
