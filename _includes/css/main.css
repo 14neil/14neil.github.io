@@ -82,6 +82,72 @@ hr.moon_wc:after {
   background-size: contain;
 }
 
+hr.moon_fq {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
+  overflow: visible;
+  border-color: #B2862E; /* line color – adjust if needed */
+}
+
+hr.moon_fq:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -1.8em;             /* lifts moon above line */
+  width: 48px;             /* adjust size */
+  height: 48px;
+  background: url("img/moon_fq.png") no-repeat center center;
+  background-size: contain;
+}
+
+hr.moon_wg {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
+  overflow: visible;
+  border-color: #B2862E; /* line color – adjust if needed */
+}
+
+hr.moon_wg:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -1.8em;             /* lifts moon above line */
+  width: 48px;             /* adjust size */
+  height: 48px;
+  background: url("img/moon_wg.png") no-repeat center center;
+  background-size: contain;
+}
+
+hr.moon_full {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
+  overflow: visible;
+  border-color: #B2862E; /* line color – adjust if needed */
+}
+
+hr.moon_full:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -1.8em;             /* lifts moon above line */
+  width: 48px;             /* adjust size */
+  height: 48px;
+  background: url("img/moon_full.png") no-repeat center center;
+  background-size: contain;
+}
+
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
