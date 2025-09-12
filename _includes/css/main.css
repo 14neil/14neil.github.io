@@ -38,6 +38,28 @@ h6 {
     font-weight: 700;
 }
 
+hr.moon_new {
+  margin: 25px auto 30px;
+  padding: 0;
+  max-width: 250px;
+  border: 0;
+  border-top: solid 5px;
+  text-align: center;
+  overflow: visible;
+  border-color: #dfad4a; /* line color – adjust if needed */
+}
+
+hr.moon_new:after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: -1.2em;             /* lifts moon above line */
+  width: 48px;             /* adjust size */
+  height: 48px;
+  background: url("img/moon_new.png") no-repeat center center;
+  background-size: contain;
+}
+
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
