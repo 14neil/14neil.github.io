@@ -46,7 +46,7 @@ hr.moon_new {
   border-top: solid 5px;
   text-align: center;
   overflow: visible;
-  border-color: #B2862E; /* line color – adjust if needed */
+  border-color: #fff; /* line color – adjust if needed */
 }
 
 hr.moon_new:after {
@@ -68,7 +68,7 @@ hr.moon_wc {
   border-top: solid 5px;
   text-align: center;
   overflow: visible;
-  border-color: #B2862E; /* line color – adjust if needed */
+  border-color: #fff; /* line color – adjust if needed */
 }
 
 hr.moon_wc:after {
@@ -90,7 +90,7 @@ hr.moon_fq {
   border-top: solid 5px;
   text-align: center;
   overflow: visible;
-  border-color: #B2862E; /* line color – adjust if needed */
+  border-color: #fff; /* line color – adjust if needed */
 }
 
 hr.moon_fq:after {
@@ -112,7 +112,7 @@ hr.moon_wg {
   border-top: solid 5px;
   text-align: center;
   overflow: visible;
-  border-color: #B2862E; /* line color – adjust if needed */
+  border-color: #fff; /* line color – adjust if needed */
 }
 
 hr.moon_wg:after {
@@ -134,7 +134,7 @@ hr.moon_full {
   border-top: solid 5px;
   text-align: center;
   overflow: visible;
-  border-color: #B2862E; /* line color – adjust if needed */
+  border-color: #fff; /* line color – adjust if needed */
 }
 
 hr.moon_full:after {
@@ -294,13 +294,6 @@ section h2 {
 section.success {
     color: #fff;
     background: #{{ site.color.primary }};
-}
-
-/* Make the headers of these sections gold */
-#research h2,
-#teaching h2,
-#mentoring h2 {
-  color: #{{ site.color.gold }};
 }
 
 @media(max-width:767px) {
