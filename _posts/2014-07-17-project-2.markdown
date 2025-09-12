@@ -6,7 +6,7 @@ date: 2014-07-17
 img: tde.jpg
 alt: 15oi_LC.png
 advisors: Raffaella Margutti, Ryan  Chornock
-credits: 
+credits: DESY, Science Communications Lab, Neil Gehrels Swift Observatory
 category: research
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
