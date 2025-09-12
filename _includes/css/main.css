@@ -539,9 +539,10 @@ footer .footer-below {
     right: 25px;
     width: 75px;
     height: 75px;
-    background-color: transparent;
+    background-color: #{{ site.color.secondary }}; 
     cursor: pointer;
 }
+/* background-color: transparent; */
 
 .portfolio-modal .close-modal:hover {
     opacity: .3;
@@ -552,9 +553,10 @@ footer .footer-below {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #fff ;
     transform: rotate(45deg);
 }
+/*  background-color: #{{ site.color.secondary }}; */
 
 .portfolio-modal .close-modal .lr .rl {
     z-index: 1052;
