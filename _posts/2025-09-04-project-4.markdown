@@ -8,5 +8,6 @@ alt: c10_collage.jpg
 project-date: Fall 2023, 2024
 professor: Alexei V. Filippenko
 credits: JWST, me
+category: teaching
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
