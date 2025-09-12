@@ -296,6 +296,13 @@ section.success {
     background: #{{ site.color.primary }};
 }
 
+/* Make the headers of these sections gold */
+#research h2,
+#teaching h2,
+#mentoring h2 {
+  color: #{{ site.color.gold }};
+}
+
 @media(max-width:767px) {
     section {
         padding: 75px 0;
@@ -365,7 +372,7 @@ section.success {
     top: 0;
     left: 0;
     opacity: 0;
-    background: rgba({{ site.color.gold }},0.9);
+    background: rgba({{ site.color.gold-rgb }},0.9);
     transition: all 0.5s ease;
 }
 
