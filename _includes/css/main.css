@@ -518,6 +518,8 @@ footer .footer-below {
     border-radius: 0;
     text-align: center;
     box-shadow: none;
+    background-color: #{{ site.color.primary }}; /* modal background */
+    color: #fff; /* make all text inside white */
 }
 
 .portfolio-modal .modal-content h2 {
