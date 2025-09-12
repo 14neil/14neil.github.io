@@ -4,7 +4,7 @@ title: Stripped-Envelope Supernova
 modal-id: 1
 date: 2014-07-18
 img: supernova.jpg
-alt: ukt_gal.png
+alt: ukt_gal_edit.png
 project-date: April 2014
 client: Start Bootstrap
 category: research
