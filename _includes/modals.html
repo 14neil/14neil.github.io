@@ -26,18 +26,24 @@
               </li>
               {% endif %}
               
-              {% if post.credits %}
+              {% if post.professor %}
+              <li>Professor:
+                <strong>{{ post.professor }}</strong>
+              </li>
+              {% endif %}
+              
+              {% if post.organizers %}
+              <li>Organizer(s):
+                <strong>{{ post.organizers }}</strong>
+              </li>
+              {% endif %}
+
+               {% if post.credits %}
               <li>Credits:
                 <strong>{{ post.credits }}</strong>
               </li>
               {% endif %}
-              <!--
-              {% if post.category %}
-              <li>Service:
-                <strong>{{ post.category }}</strong>
-              </li>
-              {% endif %}
-              -->
+              
             </ul>
             
             <button type="button" class="btn btn-default" data-dismiss="modal">
