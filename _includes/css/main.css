@@ -46,7 +46,7 @@ hr.moon_new {
   border-top: solid 5px;
   text-align: center;
   overflow: visible;
-  border-color: #dfad4a; /* line color – adjust if needed */
+  border-color: #B2862E; /* line color – adjust if needed */
 }
 
 hr.moon_new:after {
