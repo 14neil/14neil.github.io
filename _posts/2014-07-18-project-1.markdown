@@ -9,3 +9,4 @@ advisors: Sergiy S. Vasylyev, Alexei V. Filippenko
 credits: NASA/DOE/Fermi LAT Collaboration, CXC/SAO/JPL-Caltech, ZTF
 category: research
 description: Supernovae are the final stages of a massive star's stellar life cycle and can be observed as new, bright objects in a galaxy. Analysis of a supernova's chemical abundance sometimes reveal that the outer envelope of the progenitor was stripped from the star prior to explosion; these are classified as stripped-envelope supernova. The image above highlights the host galaxy of supernova (SN) 2021ukt prior to and after the supernova's explosion. Direct observational analysis reveal persistent interaction between the helium-rich ejected outer envelope and a hydrogen-rich circumstellar shell. A more detailed analysis of SN 20212ukt will be published in Pichay et. al (in prep.).
+---
