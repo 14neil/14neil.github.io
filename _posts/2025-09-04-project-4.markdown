@@ -9,5 +9,5 @@ project-date: Fall 2023, 2024
 professor: Alexei V. Filippenko
 credits: JWST, me
 category: teaching
-description: "I was an instructor for one of UC Berkeley's largest courses: Introduction to General Astronomy course in Fall 2023 and Fall 2024. Throughout the semester, I was responsible for planning weekly lessons, hosting nightly telescope observing events, and leading a course-wide lecture. In addition to learning astronomy, our class aimed for engaging our students towards being curious about the natural world and thinking scientifically.  Several of my own previous students now work on research projects in various field of astronomy and physics."
+description: "I was an instructor for one of UC Berkeley's largest courses: Introduction to General Astronomy course in Fall 2023 and Fall 2024. Throughout the semester, I was responsible for planning weekly lessons, hosting nightly telescope observing events, and leading a course-wide lecture. In addition to learning astronomy, the course engaged our students in being curious about the natural world and thinking scientifically.  Several of my own previous students now work on research projects in various field of astronomy and physics."
 ---
