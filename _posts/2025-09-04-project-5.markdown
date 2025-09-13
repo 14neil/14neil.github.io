@@ -8,6 +8,6 @@ alt: mps_collage.jpg
 project-date: Fall 2023, 2024
 organizers: Claire-Marie Kooi, 	Alison Schopmeyer
 credits: Visit Berkeley, MPS
-category: mentoring
+category: outreach
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
