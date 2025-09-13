@@ -307,13 +307,13 @@ section.success {
 }
 
 /*Overlay to make the sections stand out over the background */
-#research, #teaching, #mentoring {
+#research, #teaching, #outreach {
     /*background: rgba(0, 0, 0, 0.6); /* dark overlay */
     color: #fff;
 }
 -->
 
-/* Portfolio-like grid for Research/Teaching/Mentoring */
+/* Portfolio-like grid for Research/Teaching/Outreach */
 .portfolio-flex-grid .portfolio-flex-row {
     display: flex;
     flex-flow: row wrap;
