@@ -8,6 +8,6 @@ alt: bas_ss.png
 project-date: Fall 2023, 2024
 organizers: Darlene Yan
 credits: Marilyn Nieves, Community Resources for Science
-category: mentoring
+category: outreach
 description: Use this area of the page to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.
 ---
