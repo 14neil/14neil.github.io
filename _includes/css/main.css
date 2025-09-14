@@ -39,13 +39,13 @@ h6 {
 }
 
 .profile-pic {
-  width: 40vw;            /* scales with viewport width */
-  max-width: 300px;       /* never larger than 300px */
-  aspect-ratio: 1 / 1;    /* ensures perfect square → perfect circle */
-  border-radius: 50%;     /* circular shape */
-  object-fit: cover;      /* keeps content inside without stretching */
+  width: 40vw;            /* scales with viewport */
+  max-width: 300px;       /* cap on big screens */
+  aspect-ratio: 1 / 1;    /* ensures perfect square */
+  border-radius: 50%;     /* makes it a circle */
+  object-fit: cover;      /* keeps image proportional */
   display: block;
-  margin: 0 auto;         /* centers the image */
+  margin: 0 auto;         /* center it */
 }
 
 hr.moon_new {
