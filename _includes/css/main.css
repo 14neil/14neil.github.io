@@ -23,6 +23,7 @@ html, body {
     }
 
     /* Sections float over parallax background */
+    header,
     #about-me,
     #research,
     #teaching,
@@ -33,12 +34,13 @@ html, body {
     }
 }
 
-/* ---------------- Mobile: Smooth Repeating Backgrounds ---------------- */
+/* ---------------- Mobile: Repeating Backgrounds + Overlay ---------------- */
 @media (max-width: 767px) {
     body {
         background: none; /* remove desktop parallax */
     }
 
+    header,
     #about-me,
     #research,
     #teaching,
@@ -49,11 +51,40 @@ html, body {
         background-position: center top;   /* starts from top for visibility */
         color: #fff;
         padding: 75px 0;
+        position: relative;                /* required for overlay */
+    }
+
+    /* Overlay for readability */
+    header::before,
+    #about-me::before,
+    #research::before,
+    #teaching::before,
+    #outreach::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35); /* 35% black overlay */
+        z-index: 0;
+        pointer-events: none; /* allow interactions */
+    }
+
+    /* Ensure content sits above overlay */
+    header > *,
+    #about-me > *,
+    #research > *,
+    #teaching > *,
+    #outreach > * {
+        position: relative;
+        z-index: 1;
     }
 }
 
 /* ---------------- Extra Small Phones (<480px): Optimized Padding & Focal Points ---------------- */
 @media (max-width: 480px) {
+    header,
     #about-me,
     #research,
     #teaching,
@@ -62,7 +93,6 @@ html, body {
         background-position: center top;   /* keeps focal point visible */
     }
 }
-
 
 p {
     font-size: 20px;
