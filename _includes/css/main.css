@@ -4,33 +4,65 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Base: Desktop / large screens */
-body {
-    overflow-x: hidden;
-    background-image: url('/img/background_95opac.webp');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;          /* fills desktop nicely */
-    background-attachment: fixed;    /* parallax effect on desktop */
-    min-height: 100vh;               /* ensure body at least viewport height */
-}
-
-/* Mobile / small tablets */
-@media (max-width: 767px) {
-    body {
-        background-size: cover;       /* fills the screen width */
-        background-position: center top;
-        background-attachment: scroll; /* mobile-safe */
-        min-height: 100%;             /* ensures full page height */
-    }
-}
-
-/* Ensure html and body stretch to full height */
+/* ---------------- Base Setup ---------------- */
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
+
+/* ---------------- Desktop: Parallax Background ---------------- */
+@media (min-width: 768px) {
+    body {
+        background-image: url('/img/background_95opac.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;   /* parallax effect */
+        background-position: center center;
+    }
+
+    /* Sections float over parallax background */
+    #about-me,
+    #research,
+    #teaching,
+    #outreach {
+        background: transparent;
+        color: #fff;
+        padding: 100px 0;
+    }
+}
+
+/* ---------------- Mobile: Smooth Repeating Backgrounds ---------------- */
+@media (max-width: 767px) {
+    body {
+        background: none; /* remove desktop parallax */
+    }
+
+    #about-me,
+    #research,
+    #teaching,
+    #outreach {
+        background-image: url('/img/background_95opac.webp');
+        background-repeat: repeat-y;       /* repeat vertically only */
+        background-size: cover;            /* scale image to fill width */
+        background-position: center top;   /* starts from top for visibility */
+        color: #fff;
+        padding: 75px 0;
+    }
+}
+
+/* ---------------- Extra Small Phones (<480px): Optimized Padding & Focal Points ---------------- */
+@media (max-width: 480px) {
+    #about-me,
+    #research,
+    #teaching,
+    #outreach {
+        padding: 50px 15px;                /* smaller vertical & horizontal padding */
+        background-position: center top;   /* keeps focal point visible */
+    }
+}
+
 
 p {
     font-size: 20px;
