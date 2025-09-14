@@ -3,7 +3,7 @@ layout: default
 title: BAS Volunteer Program 
 modal-id: 6
 date: 2025-09-04
-img: bas_cover.png
+img: bas_cover.webp
 alt: bas_ss.png
 project-date: Fall 2023, 2024
 organizers: Darlene Yan
