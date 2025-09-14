@@ -56,7 +56,7 @@ hr.moon_new:after {
   top: -1.8em;             /* lifts moon above line */
   width: 48px;             /* adjust size */
   height: 48px;
-  background: url("img/moon_new.png") no-repeat center center;
+  background: url("img/moon/moon_new.png") no-repeat center center;
   background-size: contain;
 }
 
@@ -78,7 +78,7 @@ hr.moon_wc:after {
   top: -1.8em;             /* lifts moon above line */
   width: 48px;             /* adjust size */
   height: 48px;
-  background: url("img/moon_wc.png") no-repeat center center;
+  background: url("img/moon/moon_wc.png") no-repeat center center;
   background-size: contain;
 }
 
@@ -100,7 +100,7 @@ hr.moon_fq:after {
   top: -1.8em;             /* lifts moon above line */
   width: 48px;             /* adjust size */
   height: 48px;
-  background: url("img/moon_fq.png") no-repeat center center;
+  background: url("img/moon/moon_fq.png") no-repeat center center;
   background-size: contain;
 }
 
@@ -122,7 +122,7 @@ hr.moon_wg:after {
   top: -1.8em;             /* lifts moon above line */
   width: 48px;             /* adjust size */
   height: 48px;
-  background: url("img/moon_wg.png") no-repeat center center;
+  background: url("img/moon/moon_wg.png") no-repeat center center;
   background-size: contain;
 }
 
@@ -144,7 +144,7 @@ hr.moon_full:after {
   top: -1.8em;             /* lifts moon above line */
   width: 48px;             /* adjust size */
   height: 48px;
-  background: url("img/moon_full.png") no-repeat center center;
+  background: url("img/moon/moon_full.png") no-repeat center center;
   background-size: contain;
 }
 
