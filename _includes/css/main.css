@@ -6,8 +6,19 @@
 
 body {
     overflow-x: hidden;
-    background: url('/img/background_95opac.webp') no-repeat center center fixed;
-    background-size: cover;
+    background-image: url('/img/background_95opac.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;          /* fills desktop screens nicely */
+    background-attachment: scroll;   /* safer for mobile */
+}
+
+/* Adjust for smaller screens (phones & small tablets) */
+@media (max-width: 767px) {
+    body {
+        background-size: contain;    /* ensures full image is visible */
+        background-position: center top; /* aligns nicely at the top */
+    }
 }
 
 p {
