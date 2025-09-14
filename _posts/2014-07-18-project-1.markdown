@@ -3,8 +3,8 @@ layout: default
 title: Stripped-Envelope Supernova
 modal-id: 1
 date: 2014-07-18
-img: sn_draw.webp
-alt: ukt_gal_edit.webp
+img: ukt_gal.webp
+alt: sn_draw.webp
 advisors: Sergiy S. Vasylyev, Alexei V. Filippenko
 credits: NASA/DOE/Fermi LAT Collaboration, CXC/SAO/JPL-Caltech, ZTF
 category: research
