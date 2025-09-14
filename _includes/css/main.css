@@ -4,21 +4,32 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/* Base: Desktop / large screens */
 body {
     overflow-x: hidden;
     background-image: url('/img/background_95opac.webp');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;          /* fills desktop screens nicely */
-    background-attachment: scroll;   /* safer for mobile */
+    background-size: cover;          /* fills desktop nicely */
+    background-attachment: fixed;    /* parallax effect on desktop */
+    min-height: 100vh;               /* ensure body at least viewport height */
 }
 
-/* Adjust for smaller screens (phones & small tablets) */
+/* Mobile / small tablets */
 @media (max-width: 767px) {
     body {
-        background-size: contain;    /* ensures full image is visible */
-        background-position: center top; /* aligns nicely at the top */
+        background-size: cover;       /* fills the screen width */
+        background-position: center top;
+        background-attachment: scroll; /* mobile-safe */
+        min-height: 100%;             /* ensures full page height */
     }
+}
+
+/* Ensure html and body stretch to full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 p {
