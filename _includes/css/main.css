@@ -588,3 +588,11 @@ footer .footer-below {
   box-shadow: none !important;
   background: transparent !important;
 }
+
+.about-text-box {
+  background-color: rgba({{ site.color.primary-rgb }}, 0.8); /* secondary color, 80% opacity */
+  padding: 25px 30px;
+  border-radius: 12px;
+  color: #fff; /* ensure readability */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* optional: gives lift */
+}
