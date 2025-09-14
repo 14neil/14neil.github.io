@@ -4,7 +4,7 @@ title: Modelling the Milky Way
 modal-id: 3
 date: 2014-07-16
 img: stellarium.webp
-alt: radio.webp
+alt: radio_collage.webp
 advisors: Aaron Parsons
 credits: Anton Petrus, Elma Chuang, Stellarium
 category: research
