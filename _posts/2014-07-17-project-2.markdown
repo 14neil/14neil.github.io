@@ -3,7 +3,7 @@ layout: default
 title: Tidal Disruption Events
 modal-id: 2
 date: 2014-07-17
-img: tde.jpg
+img: tde.webp
 alt: 15oi_LC.png
 advisors: Raffaella Margutti, Ryan  Chornock
 credits: DESY, Science Communications Lab, Neil Gehrels Swift Observatory
