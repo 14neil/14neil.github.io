@@ -554,7 +554,7 @@ footer .footer-below {
     width: 1px;
     height: 75px;
     margin-left: 35px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #fff;
     transform: rotate(45deg);
 }
 
@@ -562,7 +562,7 @@ footer .footer-below {
     z-index: 1052;
     width: 1px;
     height: 75px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #fff;
     transform: rotate(90deg);
 }
 
