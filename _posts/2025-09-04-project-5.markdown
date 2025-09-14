@@ -4,7 +4,7 @@ title: MPS Mentoring Program
 modal-id: 5
 date: 2025-09-04
 img: berkeley.webp
-alt: mps_collage.jpg
+alt: mps_collage.webp
 project-date: Fall 2023, 2024
 organizers: Claire-Marie Kooi, 	Alison Schopmeyer
 credits: Visit Berkeley, MPS
