@@ -40,7 +40,7 @@ h6 {
 
 .profile-pic-wrapper {
   width: 100%;
-  max-width: 300px;       /* default for mobile/tablet */
+  max-width: 400px;       /* default for mobile/tablet */
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
