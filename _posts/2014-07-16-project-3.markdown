@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Modelling the Milky Way
+title: Modeling the Milky Way
 modal-id: 3
 date: 2014-07-16
 img: stellarium.webp
