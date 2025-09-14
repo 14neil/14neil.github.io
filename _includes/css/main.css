@@ -582,4 +582,9 @@ footer .footer-below {
   width: 100%;
   height: auto;
   object-fit: cover;
+
+  /* 🔑 Remove any unwanted Bootstrap borders/boxes */
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
