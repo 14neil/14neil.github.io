@@ -3,7 +3,7 @@ layout: default
 title: Introduction to General Astronomy
 modal-id: 4
 date: 2025-09-04
-img: jwst.png
+img: jwst.webp
 alt: c10_collage.jpg
 project-date: Fall 2023, 2024
 professor: Alexei V. Filippenko
