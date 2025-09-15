@@ -1,60 +1,68 @@
 /*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ * Custom Freelancer JS
+ * Based on Start Bootstrap - Freelancer
  */
 
 (function($) {
   "use strict";
 
   // -------------------------------
-  // Smooth scrolling using jQuery Easing
+  // Smooth scrolling with jQuery Easing
   // -------------------------------
-  $(function() {
-    $('.page-scroll a').bind('click', function(event) {
-      var $anchor = $(this);
+  $(document).on('click', '.page-scroll a', function(event) {
+    var $anchor = $(this);
+    var targetSelector = $anchor.attr('href');
+    var $target = $(targetSelector);
 
-      // Adjust for fixed navbar height (70px works well for your site)
-      var navOffset = 70;
+    if ($target.length) {
+      var navHeight = $('.navbar').outerHeight();
 
       $('html, body').stop().animate({
-        scrollTop: $($anchor.attr('href')).offset().top - navOffset
+        scrollTop: $target.offset().top - navHeight
       }, 1500, 'easeInOutExpo');
+    }
 
-      event.preventDefault();
-    });
+    event.preventDefault();
   });
 
   // -------------------------------
   // Floating label headings for forms
-  // (Safe to keep even if you don’t use the contact form)
   // -------------------------------
-  $(function() {
-    $("body")
-      .on("input propertychange", ".floating-label-form-group", function(e) {
-        $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-      })
-      .on("focus", ".floating-label-form-group", function() {
-        $(this).addClass("floating-label-form-group-with-focus");
-      })
-      .on("blur", ".floating-label-form-group", function() {
-        $(this).removeClass("floating-label-form-group-with-focus");
-      });
-  });
+  $("body")
+    .on("input propertychange", ".floating-label-form-group", function(e) {
+      $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
+    })
+    .on("focus", ".floating-label-form-group", function() {
+      $(this).addClass("floating-label-form-group-with-focus");
+    })
+    .on("blur", ".floating-label-form-group", function() {
+      $(this).removeClass("floating-label-form-group-with-focus");
+    });
 
   // -------------------------------
-  // Activate Scrollspy to highlight nav items on scroll
+  // Activate Scrollspy
   // -------------------------------
   $('body').scrollspy({
-    target: '.navbar-fixed-top',
-    offset: 70 // same value as navOffset above
+    target: '.navbar',
+    offset: $('.navbar').outerHeight()
   });
 
   // -------------------------------
   // Closes the responsive menu on nav item click
   // -------------------------------
-  $('.navbar-collapse ul li a').click(function() {
+  $(document).on('click', '.navbar-collapse ul li a', function() {
     $('.navbar-toggle:visible').click();
+  });
+
+  // -------------------------------
+  // Shrink navbar on scroll
+  // -------------------------------
+  $(window).on('scroll', function() {
+    if ($(".navbar").offset().top > 50) {
+      $(".navbar").addClass("navbar-shrink");
+    } else {
+      $(".navbar").removeClass("navbar-shrink");
+    }
   });
 
 })(jQuery);
