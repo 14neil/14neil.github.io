@@ -643,6 +643,11 @@ footer .footer-below {
     line-height: 28px;
 }
 
+/* Added after trying to debug scrolling issue*/
+.scroll-top .btn:focus {
+    outline: 0;
+}
+
 /* Modals */
 .portfolio-modal .modal-content {
     padding: 100px 0;
