@@ -7,7 +7,7 @@ img: crs_logo.webp
 alt: bas_ss.webp
 project-date: Fall 2023, 2024
 organizers: Darlene Yan
-credits: Marilyn Nieves, Community Resources for Science
+credits: CRS
 category: outreach
 description: I volunteered as a Community Resources for Science mentor for the Longfellow Middle School's "Be A Scientist" program in Fall 2024. Our goal was to guide young East Bay scientists through self-led science experiments. Throughout the various experimental subfields (physics, chemistry, physiology), I helped engage my students with applying the scientific method and thinking critically about their indivudal projects. 
 ---
