@@ -1,5 +1,5 @@
 /*!
- * Freelancer.js - robust smooth scroll + scrollspy
+ * Freelancer.js - smooth scroll + scrollspy + navbar shrink
  */
 
 (function($) {
@@ -7,11 +7,12 @@
 
   $(function() {
 
+    // Returns current navbar height
     function navHeight() {
       return $('.navbar').outerHeight() || 0;
     }
 
-    // Init scrollspy with navbar offset
+    // Initialize scrollspy
     if ($.fn.scrollspy) {
       $('body').scrollspy({
         target: '.navbar-fixed-top',
@@ -19,56 +20,62 @@
       });
     }
 
-    // Smooth scrolling for nav links
+    // Smooth scrolling for in-page nav links
     $(document).on('click', '.page-scroll a', function(e) {
       var $anchor = $(this);
       var href = $anchor.attr('href');
 
-      if (!href || href.charAt(0) !== '#') return; // only handle in-page anchors
+      // Only handle in-page anchors
+      if (!href || href.charAt(0) !== '#') return;
       if (href === '#') { e.preventDefault(); return; }
 
       var $target = $(href);
-      if (!$target.length) return; // not found, let default work
+      if (!$target.length) return;
 
       e.preventDefault();
 
       var nh = navHeight();
       var targetTop = Math.max(0, Math.round($target.offset().top - nh + 1));
+      var currentTop = $(window).scrollTop();
 
-      $('html, body').stop(true, true).animate(
-        { scrollTop: targetTop },
-        900,
-        'easeInOutExpo',
-        function() {
-          // Update URL hash without jump
-          try {
-            if (history.replaceState) {
-              if (location.hash !== href) history.pushState(null, null, href);
-              else history.replaceState(null, null, href);
-            } else {
-              location.hash = href;
-            }
-          } catch (err) {}
-          if ($.fn.scrollspy) $('body').scrollspy('refresh');
-        }
-      );
+      // Only animate if scroll position differs
+      if (Math.abs(currentTop - targetTop) > 2) {
+        $('html, body').stop(true, true).animate(
+          { scrollTop: targetTop },
+          900,
+          'easeInOutExpo',
+          function() {
+            // Update URL hash without jump
+            try {
+              if (history.replaceState) {
+                history.replaceState(null, null, href);
+              } else {
+                location.hash = href;
+              }
+              if ($.fn.scrollspy) $('body').scrollspy('refresh');
+            } catch (err) {}
+          }
+        );
+      }
     });
 
-    // Close responsive menu on nav click
+    // Close responsive menu on nav link click
     $(document).on('click', '.navbar-collapse ul li a', function() {
       $('.navbar-toggle:visible').click();
     });
 
-    // Optional: navbar shrink on scroll
-    $(window).on('scroll', function() {
+    // Navbar shrink effect on scroll
+    function checkNavbarShrink() {
       if ($(".navbar").offset().top > 50) {
         $(".navbar").addClass("navbar-shrink");
       } else {
         $(".navbar").removeClass("navbar-shrink");
       }
-    });
+    }
+    $(window).on('scroll', checkNavbarShrink);
+    checkNavbarShrink(); // initial check
 
-    // Recalculate offsets on resize
+    // Refresh scrollspy on window resize
     var resizeTimer;
     $(window).on('resize', function() {
       clearTimeout(resizeTimer);
