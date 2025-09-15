@@ -149,41 +149,115 @@ h6 {
     display: block;
 }
 
-/* ---------------- Custom HR Styles ---------------- */
-hr.moon_new,
-hr.moon_wc,
-hr.moon_fq,
-hr.moon_wg,
+hr.moon_new {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0; 
+    border-top: solid 5px; 
+    text-align: center;
+    overflow: visible;
+    border-color: #fff; /* line color – adjust if needed */ 
+}
+
+hr.moon_new:after { 
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em; /* lifts moon above line */ 
+    width: 48px; /* adjust size */ 
+    height: 48px; 
+    background: url("img/moon/moon_new.png") no-repeat center center; 
+    background-size: contain; 
+}
+
+hr.moon_wc {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0; 
+    border-top: solid 5px; 
+    text-align: center;
+    overflow: visible;
+    border-color: #fff; /* line color – adjust if needed */ 
+}
+
+hr.moon_wc:after { 
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em; /* lifts moon above line */ 
+    width: 48px; /* adjust size */ 
+    height: 48px; 
+    background: url("img/moon/moon_wc.png") no-repeat center center; 
+    background-size: contain; 
+}
+
+hr.moon_fq {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0; 
+    border-top: solid 5px; 
+    text-align: center;
+    overflow: visible;
+    border-color: #fff; /* line color – adjust if needed */ 
+}
+
+hr.moon_fq:after { 
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em; /* lifts moon above line */ 
+    width: 48px; /* adjust size */ 
+    height: 48px; 
+    background: url("img/moon/moon_fq.png") no-repeat center center; 
+    background-size: contain; 
+}
+
+hr.moon_wg {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0; 
+    border-top: solid 5px; 
+    text-align: center;
+    overflow: visible;
+    border-color: #fff; /* line color – adjust if needed */ 
+}
+
+hr.moon_wg:after { 
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em; /* lifts moon above line */ 
+    width: 48px; /* adjust size */ 
+    height: 48px; 
+    background: url("img/moon/moon_wg.png") no-repeat center center; 
+    background-size: contain; 
+}
+
 hr.moon_full {
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
-    border: 0;
-    border-top: solid 5px;
+    border: 0; 
+    border-top: solid 5px; 
     text-align: center;
     overflow: visible;
-    border-color: #fff; /* line color – adjust if needed */
+    border-color: #fff; /* line color – adjust if needed */ 
 }
 
-hr.moon_new:after,
-hr.moon_wc:after,
-hr.moon_fq:after,
-hr.moon_wg:after,
-hr.moon_full:after {
+hr.moon_full:after { 
     content: "";
     display: inline-block;
     position: relative;
-    top: -1.8em; /* lifts moon above line */
-    width: 48px; /* adjust size */
-    height: 48px;
-    background-size: contain;
+    top: -1.8em; /* lifts moon above line */ 
+    width: 48px; /* adjust size */ 
+    height: 48px; 
+    background: url("img/moon/moon_full.png") no-repeat center center; 
+    background-size: contain; 
 }
-
-hr.moon_new:after { background: url("img/moon/moon_new.png") no-repeat center center; }
-hr.moon_wc:after { background: url("img/moon/moon_wc.png") no-repeat center center; }
-hr.moon_fq:after { background: url("img/moon/moon_fq.png") no-repeat center center; }
-hr.moon_wg:after { background: url("img/moon/moon_wg.png") no-repeat center center; }
-hr.moon_full:after { background: url("img/moon/moon_full.png") no-repeat center center; }
 
 /* Star HRs */
 hr.star-light,
