@@ -1,31 +1,37 @@
-// Smooth scrolling using jQuery Easing
+/*!
+ * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+// jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
-  $('a.page-scroll').on('click', function(event) {
+  $('.page-scroll a').bind('click', function(event) {
     var $anchor = $(this);
-    var target = $($anchor.attr('href'));
-
-    // Only animate if the target exists and it's not already in view
-    if (target.length && target.offset().top !== $(window).scrollTop()) {
-      $('html, body').stop().animate(
-        {
-          scrollTop: target.offset().top - 50 // offset for fixed navbar
-        },
-        1250,
-        'easeInOutExpo'
-      );
-    }
-
+    $('html, body').stop().animate({
+      scrollTop: $($anchor.attr('href')).offset().top
+    }, 1500, 'easeInOutExpo');
     event.preventDefault();
   });
 });
 
-// Activate scrollspy to highlight nav items on scroll
-$('body').scrollspy({
-  target: '.navbar-fixed-top',
-  offset: 51
+// Floating label headings for the contact form
+$(function() {
+  $("body").on("input propertychange", ".floating-label-form-group", function(e) {
+    $(this).toggleClass("floating-label-form-group-with-value", !! $(e.target).val());
+  }).on("focus", ".floating-label-form-group", function() {
+    $(this).addClass("floating-label-form-group-with-focus");
+  }).on("blur", ".floating-label-form-group", function() {
+    $(this).removeClass("floating-label-form-group-with-focus");
+  });
 });
 
-// Close the responsive menu when a menu item is clicked
+// Highlight the top nav as scrolling occurs
+$('body').scrollspy({
+  target: '.navbar-fixed-top'
+});
+
+// Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
   $('.navbar-toggle:visible').click();
 });
