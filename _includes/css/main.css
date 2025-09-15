@@ -704,31 +704,3 @@ footer .footer-below {
   color: #fff; /* ensure readability */
   box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* optional: gives lift */
 }
-
-/* Ensure smooth scroll accounts for fixed navbar */
-section {
-  scroll-margin-top: 100px; /* modern browsers use this */
-}
-
-/* For older browsers, offset padding + negative margin trick */
-#about-me,
-#research,
-#teaching,
-#outreach {
-  padding-top: 100px;
-  margin-top: -100px;
-}
-
-/* Navbar always on top */
-.navbar,
-.navbar-fixed-top {
-  z-index: 2000;
-}
-
-/* Optional: smooth shrink animation for navbar */
-.navbar-shrink {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
-  transition: padding 0.3s ease;
-}
-
