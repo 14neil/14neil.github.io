@@ -704,3 +704,24 @@ footer .footer-below {
   color: #fff; /* ensure readability */
   box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* optional: gives lift */
 }
+
+/* Ensure sections scroll cleanly below fixed navbar */
+section {
+  scroll-margin-top: 100px; /* modern browsers handle smooth scroll offset */
+}
+
+/* Fallback for older browsers: negative margin trick */
+#about-me,
+#research,
+#teaching,
+#outreach {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
+/* Make sure navbar stays clickable */
+.navbar,
+.navbar-fixed-top {
+  z-index: 2000;
+}
+
