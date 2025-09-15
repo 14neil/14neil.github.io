@@ -1,16 +1,100 @@
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
 /* ---------------- Base Setup ---------------- */
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
+/* ---------------- Desktop: Parallax Background ---------------- */
+@media (min-width: 768px) {
+    body {
+        background-image: url('/img/background_95opac.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; /* parallax effect */
+        background-position: center center;
+    }
+
+    /* Sections float over parallax background */
+    header,
+    #about-me,
+    #research,
+    #teaching,
+    #outreach {
+        background: transparent;
+        color: #fff;
+    }
+}
+
+/* ---------------- Mobile: Repeating Backgrounds + Overlay ---------------- */
+@media (max-width: 767px) {
+    body {
+        background: none; /* remove desktop parallax */
+    }
+
+    header,
+    #about-me,
+    #research,
+    #teaching,
+    #outreach {
+        background-image: url('/img/background_95opac.webp');
+        background-repeat: repeat-y; /* repeat vertically only */
+        background-size: cover;
+        background-position: center top; /* starts from top for visibility */
+        color: #fff;
+        padding: 75px 0;
+        position: relative; /* required for overlay */
+    }
+
+    /* Overlay for readability */
+    header::before,
+    #about-me::before,
+    #research::before,
+    #teaching::before,
+    #outreach::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35); /* 35% black overlay */
+        z-index: 0;
+        pointer-events: none; /* allow interactions */
+    }
+
+    /* Ensure content sits above overlay */
+    header > *,
+    #about-me > *,
+    #research > *,
+    #teaching > *,
+    #outreach > * {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* ---------------- Extra Small Phones (<480px): Optimized Padding & Focal Points ---------------- */
+@media (max-width: 480px) {
+    header,
+    #about-me,
+    #research,
+    #teaching,
+    #outreach {
+        padding: 50px 15px; /* smaller vertical & horizontal padding */
+        background-position: center top; /* keeps focal point visible */
+    }
+}
+
+/* ---------------- Typography ---------------- */
 p {
     font-size: 20px;
 }
@@ -28,27 +112,123 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
-/* ---------------- Sections & Navbar ---------------- */
-section {
-    padding: 100px 0 !important; /* ensures all sections align under navbar */
+/* ---------------- Profile Picture ---------------- */
+.profile-pic-wrapper {
+    width: 100%;
+    max-width: 400px; /* default for mobile/tablet */
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+/* On larger screens, force 512x512 */
+@media (min-width: 992px) {
+    .profile-pic-wrapper {
+        width: 512px;
+        max-width: 512px;
+        aspect-ratio: 1 / 1;
+    }
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps proportions inside the circle */
+    display: block;
+}
+
+/* ---------------- Custom HR Styles ---------------- */
+hr.moon_new,
+hr.moon_wc,
+hr.moon_fq,
+hr.moon_wg,
+hr.moon_full {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    overflow: visible;
+    border-color: #fff; /* line color – adjust if needed */
+}
+
+hr.moon_new:after,
+hr.moon_wc:after,
+hr.moon_fq:after,
+hr.moon_wg:after,
+hr.moon_full:after {
+    content: "";
+    display: inline-block;
     position: relative;
-    z-index: 1;
-    background: transparent;
+    top: -1.8em; /* lifts moon above line */
+    width: 48px; /* adjust size */
+    height: 48px;
+    background-size: contain;
 }
 
-section h2 {
-    margin: 0;
-    font-size: 3em;
+hr.moon_new:after { background: url("img/moon/moon_new.png") no-repeat center center; }
+hr.moon_wc:after { background: url("img/moon/moon_wc.png") no-repeat center center; }
+hr.moon_fq:after { background: url("img/moon/moon_fq.png") no-repeat center center; }
+hr.moon_wg:after { background: url("img/moon/moon_wg.png") no-repeat center center; }
+hr.moon_full:after { background: url("img/moon/moon_full.png") no-repeat center center; }
+
+/* Star HRs */
+hr.star-light,
+hr.star-primary {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    overflow: visible;
 }
 
-.navbar-nav > .active > a {
-    background-color: #{{ site.color.secondary-dark }} !important;
+hr.star-light:after,
+hr.star-primary:after {
+    content: "\f005";
+    display: inline-block;
+    position: relative;
+    top: -0.8em;
+    padding: 0 0.25em;
+    font-family: FontAwesome;
+    font-size: 2em;
+}
+
+hr.star-light {
+    border-color: #{{ site.color.primary }};
+}
+
+hr.star-light:after {
+    color: #{{ site.color.primary }};
+    background-color: #fff;
+}
+
+hr.star-primary {
+    border-color: #fff;
+}
+
+hr.star-primary:after {
+    color: #{{ site.color.gold }};
+    background-color: #{{ site.color.primary }};
+}
+
+/* ---------------- Image Centering ---------------- */
+.img-centered {
+    margin: 0 auto;
 }
 
 /* ---------------- Header ---------------- */
@@ -73,6 +253,9 @@ header img {
 }
 
 header .intro-text .name {
+    display: block;
+    text-transform: uppercase;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -82,99 +265,44 @@ header .intro-text .welcome {
     font-weight: 300;
 }
 
-/* ---------------- Profile Picture ---------------- */
-.profile-pic-wrapper {
-    width: 100%;
-    max-width: 400px;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
-    overflow: hidden;
-    margin: 0 auto 20px;
-}
-
-@media(min-width: 992px) {
-    .profile-pic-wrapper {
-        width: 512px;
-        max-width: 512px;
+/* ---------------- Desktop Header Adjustments ---------------- */
+@media (min-width: 768px) {
+    header .container {
+        padding-top: 200px;
+        padding-bottom: 100px;
     }
-}
 
-.profile-pic {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
 
-/* ---------------- Horizontal Rules ---------------- */
-hr.moon_wc,
-hr.moon_fq,
-hr.moon_wg,
-hr.moon_full,
-hr.moon_new {
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 250px;
-    border: 0;
-    border-top: solid 5px #fff;
-    text-align: center;
-    overflow: visible;
-}
+    header .intro-text .welcome {
+        font-size: 1.75em;
+    }
 
-hr.moon_wc:after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: -1.8em;
-    width: 48px;
-    height: 48px;
-    background: url("img/moon/moon_wc.png") no-repeat center/contain;
-}
+    .navbar-fixed-top {
+        padding: 25px 0;
+        transition: padding 0.3s;
+    }
 
-hr.moon_fq:after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: -1.8em;
-    width: 48px;
-    height: 48px;
-    background: url("img/moon/moon_fq.png") no-repeat center/contain;
-}
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        transition: all 0.3s;
+    }
 
-hr.moon_wg:after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: -1.8em;
-    width: 48px;
-    height: 48px;
-    background: url("img/moon/moon_wg.png") no-repeat center/contain;
-}
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
 
-hr.moon_full:after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: -1.8em;
-    width: 48px;
-    height: 48px;
-    background: url("img/moon/moon_full.png") no-repeat center/contain;
-}
-
-hr.moon_new:after {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: -1.8em;
-    width: 48px;
-    height: 48px;
-    background: url("img/moon/moon_new.png") no-repeat center/contain;
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
 }
 
 /* ---------------- Navbar ---------------- */
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
 }
 
@@ -195,59 +323,33 @@ hr.moon_new:after {
     border: 0;
 }
 
-@media(min-width:768px) {
-    .navbar-fixed-top {
-        padding: 25px 0;
-        transition: padding .3s;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        transition: all .3s;
-    }
-
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
+/* ---------------- Sections ---------------- */
+section {
+    padding: 100px 0;
+    background: transparent;
 }
 
-/* ---------------- Responsive ---------------- */
-@media(max-width:767px) {
+section h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+section.success {
+    color: #fff;
+    background: #{{ site.color.primary }};
+}
+
+@media (max-width: 767px) {
     section {
         padding: 75px 0;
     }
+
+    section.first {
+        padding-top: 75px;
+    }
 }
 
-/* ---------------- About Me Carousel ---------------- */
-#aboutCarousel {
-    max-width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-}
-
-#aboutCarousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-}
-
-.about-text-box {
-    background-color: rgba({{ site.color.primary-rgb }}, 0.8);
-    padding: 20px 30px;
-    border-radius: 12px;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-}
-
-/* ---------------- Portfolio Grid ---------------- */
+/* ---------------- Portfolio Flex Grid ---------------- */
 .portfolio-flex-grid .portfolio-flex-row {
     display: flex;
     flex-flow: row wrap;
@@ -259,22 +361,32 @@ hr.moon_new:after {
 .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
     flex: 1 1 calc(33.33% - 30px);
     max-width: calc(33.33% - 30px);
+    margin: 0;
 }
 
-@media(max-width:960px) {
+.portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    border-radius: 4px;
+}
+
+@media (max-width: 960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
         flex: 1 1 100%;
         max-width: 100%;
     }
 }
 
+/* Hover overlay effect */
 .portfolio-item .portfolio-link {
     display: block;
     position: relative;
@@ -289,7 +401,7 @@ hr.moon_new:after {
     top: 0;
     left: 0;
     opacity: 0;
-    background: rgba({{ site.color.gold-rgb }},0.9);
+    background: rgba({{ site.color.gold-rgb }}, 0.9);
     transition: all 0.5s ease;
 }
 
@@ -317,21 +429,21 @@ hr.moon_new:after {
     margin: 0;
 }
 
-/* ---------------- Buttons & Forms ---------------- */
+/* ---------------- Buttons and Forms ---------------- */
 .btn-outline {
     margin-top: 15px;
-    border: 2px solid #fff;
+    border: solid 2px #fff;
     font-size: 20px;
     color: #fff;
-    background: 0 0;
-    transition: all .3s ease-in-out;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-outline:hover,
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: 2px solid #fff;
+    border: solid 2px #fff;
     color: #{{ site.color.primary }};
     background: #fff;
 }
@@ -339,7 +451,7 @@ hr.moon_new:after {
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
-    padding-bottom: .5em;
+    padding-bottom: 0.5em;
     border-bottom: 1px solid #eee;
 }
 
@@ -350,8 +462,8 @@ hr.moon_new:after {
     padding: 0;
     border: 0;
     font-size: 1.5em;
-    background: 0 0;
-    box-shadow: none!important;
+    background: transparent;
+    box-shadow: none !important;
     resize: none;
 }
 
@@ -361,10 +473,10 @@ hr.moon_new:after {
     position: relative;
     top: 2em;
     margin: 0;
-    font-size: .85em;
+    font-size: 0.85em;
     line-height: 1.764705882em;
     opacity: 0;
-    transition: top .3s ease, opacity .3s ease;
+    transition: top 0.3s ease, opacity 0.3s ease;
 }
 
 .floating-label-form-group-with-value label {
@@ -399,6 +511,23 @@ footer .footer-below {
     background-color: #{{ site.color.secondary-dark }};
 }
 
+.btn-social {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    line-height: 45px;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active {
+    outline: 0;
+}
+
 /* ---------------- Scroll Top ---------------- */
 .scroll-top {
     z-index: 1049;
@@ -430,7 +559,7 @@ footer .footer-below {
     text-align: center;
     box-shadow: none;
     background-color: #{{ site.color.primary }};
-    color: #fff;
+    color: #fff; /* make all text inside white */
 }
 
 .portfolio-modal .modal-content h2 {
@@ -457,7 +586,7 @@ footer .footer-below {
 }
 
 .portfolio-modal .close-modal:hover {
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .portfolio-modal .close-modal .lr {
@@ -477,18 +606,31 @@ footer .footer-below {
     transform: rotate(90deg);
 }
 
-/* ---------------- Responsive Header & Sections ---------------- */
-@media(min-width:768px){
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
-    }
+.navbar-nav > .active > a {
+    background-color: #{{ site.color.secondary-dark }} !important;
+}
 
-    header .intro-text .name {
-        font-size: 4.75em;
-    }
+/* ---------------- Slideshow in About Me Section ---------------- */
+#aboutCarousel {
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
 
-    header .intro-text .welcome {
-        font-size: 1.75em;
-    }
+#aboutCarousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Remove any unwanted Bootstrap borders/boxes */
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.about-text-box {
+    background-color: rgba({{ site.color.primary-rgb }}, 0.8); /* secondary color, 80% opacity */
+    padding: 20px 30px;
+    border-radius: 12px;
+    color: #fff; /* ensure readability */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* optional: gives lift */
 }
