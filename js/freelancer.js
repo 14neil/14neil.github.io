@@ -1,31 +1,32 @@
 /*!
- * Freelancer.js - smooth scroll + scrollspy + navbar shrink
+ * Freelancer.js - smooth scroll + scrollspy + fixed navbar offset
  */
 
 (function($) {
   "use strict";
 
   $(function() {
+    var $body = $('body');
+    var $window = $(window);
+    var $navbar = $('.navbar-fixed-top');
 
-    // Returns current navbar height
     function navHeight() {
-      return $('.navbar').outerHeight() || 0;
+      return $navbar.outerHeight() || 0;
     }
 
     // Initialize scrollspy
     if ($.fn.scrollspy) {
-      $('body').scrollspy({
+      $body.scrollspy({
         target: '.navbar-fixed-top',
         offset: navHeight() + 1
       });
     }
 
-    // Smooth scrolling for in-page nav links
+    // Smooth scrolling for nav links
     $(document).on('click', '.page-scroll a', function(e) {
       var $anchor = $(this);
       var href = $anchor.attr('href');
 
-      // Only handle in-page anchors
       if (!href || href.charAt(0) !== '#') return;
       if (href === '#') { e.preventDefault(); return; }
 
@@ -36,24 +37,24 @@
 
       var nh = navHeight();
       var targetTop = Math.max(0, Math.round($target.offset().top - nh + 1));
-      var currentTop = $(window).scrollTop();
+      var currentTop = $window.scrollTop();
 
-      // Only animate if scroll position differs
+      // Only scroll if target is not current (threshold 2px)
       if (Math.abs(currentTop - targetTop) > 2) {
+
+        // Temporarily disable scrollspy to prevent jumps
+        if ($.fn.scrollspy) {
+          $body.removeData('bs.scrollspy'); 
+          $body.scrollspy({ target: '.navbar-fixed-top', offset: nh + 1 });
+        }
+
         $('html, body').stop(true, true).animate(
           { scrollTop: targetTop },
           900,
           'easeInOutExpo',
           function() {
-            // Update URL hash without jump
-            try {
-              if (history.replaceState) {
-                history.replaceState(null, null, href);
-              } else {
-                location.hash = href;
-              }
-              if ($.fn.scrollspy) $('body').scrollspy('refresh');
-            } catch (err) {}
+            // Refresh scrollspy after animation
+            if ($.fn.scrollspy) $body.scrollspy('refresh');
           }
         );
       }
@@ -64,23 +65,20 @@
       $('.navbar-toggle:visible').click();
     });
 
-    // Navbar shrink effect on scroll
+    // Navbar shrink effect
     function checkNavbarShrink() {
-      if ($(".navbar").offset().top > 50) {
-        $(".navbar").addClass("navbar-shrink");
-      } else {
-        $(".navbar").removeClass("navbar-shrink");
-      }
+      if ($navbar.offset().top > 50) $navbar.addClass('navbar-shrink');
+      else $navbar.removeClass('navbar-shrink');
     }
-    $(window).on('scroll', checkNavbarShrink);
-    checkNavbarShrink(); // initial check
+    $window.on('scroll', checkNavbarShrink);
+    checkNavbarShrink();
 
-    // Refresh scrollspy on window resize
+    // Recalculate scrollspy on resize
     var resizeTimer;
-    $(window).on('resize', function() {
+    $window.on('resize', function() {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function() {
-        if ($.fn.scrollspy) $('body').scrollspy('refresh');
+        if ($.fn.scrollspy) $body.scrollspy('refresh');
       }, 150);
     });
 
