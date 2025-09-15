@@ -1,7 +1,6 @@
 /*!
  * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
 /* ---------------- Base Setup ---------------- */
@@ -10,87 +9,6 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
-
-/* ---------------- Desktop: Parallax Background ---------------- */
-@media (min-width: 768px) {
-    body {
-        background-image: url('/img/background_95opac.webp');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;   /* parallax effect */
-        background-position: center center;
-    }
-
-    /* Sections float over parallax background */
-    header,
-    #about-me,
-    #research,
-    #teaching,
-    #outreach {
-        background: transparent;
-        color: #fff;
-    }
-}
-
-/* ---------------- Mobile: Repeating Backgrounds + Overlay ---------------- */
-@media (max-width: 767px) {
-    body {
-        background: none; /* remove desktop parallax */
-    }
-
-    header,
-    #about-me,
-    #research,
-    #teaching,
-    #outreach {
-        background-image: url('/img/background_95opac.webp');
-        background-repeat: repeat-y;       /* repeat vertically only */
-        background-size: cover;            /* scale image to fill width */
-        background-position: center top;   /* starts from top for visibility */
-        color: #fff;
-        padding: 75px 0;
-        position: relative;                /* required for overlay */
-    }
-
-    /* Overlay for readability */
-    header::before,
-    #about-me::before,
-    #research::before,
-    #teaching::before,
-    #outreach::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.35); /* 35% black overlay */
-        z-index: 0;
-        pointer-events: none; /* allow interactions */
-    }
-
-    /* Ensure content sits above overlay */
-    header > *,
-    #about-me > *,
-    #research > *,
-    #teaching > *,
-    #outreach > * {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-/* ---------------- Extra Small Phones (<480px): Optimized Padding & Focal Points ---------------- */
-@media (max-width: 480px) {
-    header,
-    #about-me,
-    #research,
-    #teaching,
-    #outreach {
-        padding: 50px 15px;                /* smaller vertical & horizontal padding */
-        background-position: center top;   /* keeps focal point visible */
-    }
 }
 
 p {
@@ -110,203 +28,30 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
-/* Added to normalize section size trying to debug nav issue*/
+/* ---------------- Sections & Navbar ---------------- */
 section {
     padding: 100px 0 !important; /* ensures all sections align under navbar */
     position: relative;
     z-index: 1;
+    background: transparent;
 }
 
-.profile-pic-wrapper {
-  width: 100%;
-  max-width: 400px;       /* default for mobile/tablet */
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto 20px;
+section h2 {
+    margin: 0;
+    font-size: 3em;
 }
 
-/* On larger screens, force 512x512 */
-@media (min-width: 992px) {
-  .profile-pic-wrapper {
-    width: 512px;
-    max-width: 512px;
-    aspect-ratio: 1 / 1;
-  }
+.navbar-nav > .active > a {
+    background-color: #{{ site.color.secondary-dark }} !important;
 }
 
-.profile-pic {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* keeps proportions inside the circle */
-  display: block;
-}
-
-hr.moon_new {
-  margin: 25px auto 30px;
-  padding: 0;
-  max-width: 250px;
-  border: 0;
-  border-top: solid 5px;
-  text-align: center;
-  overflow: visible;
-  border-color: #fff; /* line color – adjust if needed */
-}
-
-hr.moon_new:after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: -1.8em;             /* lifts moon above line */
-  width: 48px;             /* adjust size */
-  height: 48px;
-  background: url("img/moon/moon_new.png") no-repeat center center;
-  background-size: contain;
-}
-
-hr.moon_wc {
-  margin: 25px auto 30px;
-  padding: 0;
-  max-width: 250px;
-  border: 0;
-  border-top: solid 5px;
-  text-align: center;
-  overflow: visible;
-  border-color: #fff; /* line color – adjust if needed */
-}
-
-hr.moon_wc:after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: -1.8em;             /* lifts moon above line */
-  width: 48px;             /* adjust size */
-  height: 48px;
-  background: url("img/moon/moon_wc.png") no-repeat center center;
-  background-size: contain;
-}
-
-hr.moon_fq {
-  margin: 25px auto 30px;
-  padding: 0;
-  max-width: 250px;
-  border: 0;
-  border-top: solid 5px;
-  text-align: center;
-  overflow: visible;
-  border-color: #fff; /* line color – adjust if needed */
-}
-
-hr.moon_fq:after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: -1.8em;             /* lifts moon above line */
-  width: 48px;             /* adjust size */
-  height: 48px;
-  background: url("img/moon/moon_fq.png") no-repeat center center;
-  background-size: contain;
-}
-
-hr.moon_wg {
-  margin: 25px auto 30px;
-  padding: 0;
-  max-width: 250px;
-  border: 0;
-  border-top: solid 5px;
-  text-align: center;
-  overflow: visible;
-  border-color: #fff; /* line color – adjust if needed */
-}
-
-hr.moon_wg:after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: -1.8em;             /* lifts moon above line */
-  width: 48px;             /* adjust size */
-  height: 48px;
-  background: url("img/moon/moon_wg.png") no-repeat center center;
-  background-size: contain;
-}
-
-hr.moon_full {
-  margin: 25px auto 30px;
-  padding: 0;
-  max-width: 250px;
-  border: 0;
-  border-top: solid 5px;
-  text-align: center;
-  overflow: visible;
-  border-color: #fff; /* line color – adjust if needed */
-}
-
-hr.moon_full:after {
-  content: "";
-  display: inline-block;
-  position: relative;
-  top: -1.8em;             /* lifts moon above line */
-  width: 48px;             /* adjust size */
-  height: 48px;
-  background: url("img/moon/moon_full.png") no-repeat center center;
-  background-size: contain;
-}
-
-hr.star-light,
-hr.star-primary {
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 250px;
-    border: 0;
-    border-top: solid 5px;
-    text-align: center;
-    overflow: visible;
-}
-
-hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
-    display: inline-block;
-    position: relative;
-    top: -.8em;
-    padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
-}
-
-hr.star-light {
-    border-color: #{{ site.color.primary }};
-}
-
-hr.star-light:after {
-    color: #{{ site.color.primary }};
-    background-color: #fff ;
-}
-
-hr.star-primary {
-    border-color: #fff;
-}
-
-hr.star-primary:after {
-    color: #{{ site.color.gold }};
-    background-color: #{{ site.color.primary }};
-}
-
-.img-centered {
-    margin: 0 auto;
-}
-
+/* ---------------- Header ---------------- */
 header {
     display: flex;
     align-items: center;
@@ -328,9 +73,6 @@ header img {
 }
 
 header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 700;
 }
@@ -340,40 +82,96 @@ header .intro-text .welcome {
     font-weight: 300;
 }
 
-@media(min-width:768px) {
-    header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
-    }
+/* ---------------- Profile Picture ---------------- */
+.profile-pic-wrapper {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
 
-    header .intro-text .name {
-        font-size: 4.75em;
-    }
-
-    header .intro-text .welcome {
-        font-size: 1.75em;
-    }
-
-    .navbar-fixed-top {
-        padding: 25px 0;
-        transition: padding .3s;
-    }
-
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        transition: all .3s;
-    }
-
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
+@media(min-width: 992px) {
+    .profile-pic-wrapper {
+        width: 512px;
+        max-width: 512px;
     }
 }
 
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
 
+/* ---------------- Horizontal Rules ---------------- */
+hr.moon_wc,
+hr.moon_fq,
+hr.moon_wg,
+hr.moon_full,
+hr.moon_new {
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 250px;
+    border: 0;
+    border-top: solid 5px #fff;
+    text-align: center;
+    overflow: visible;
+}
+
+hr.moon_wc:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em;
+    width: 48px;
+    height: 48px;
+    background: url("img/moon/moon_wc.png") no-repeat center/contain;
+}
+
+hr.moon_fq:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em;
+    width: 48px;
+    height: 48px;
+    background: url("img/moon/moon_fq.png") no-repeat center/contain;
+}
+
+hr.moon_wg:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em;
+    width: 48px;
+    height: 48px;
+    background: url("img/moon/moon_wg.png") no-repeat center/contain;
+}
+
+hr.moon_full:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em;
+    width: 48px;
+    height: 48px;
+    background: url("img/moon/moon_full.png") no-repeat center/contain;
+}
+
+hr.moon_new:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -1.8em;
+    width: 48px;
+    height: 48px;
+    background: url("img/moon/moon_new.png") no-repeat center/contain;
+}
+
+/* ---------------- Navbar ---------------- */
 .navbar {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -397,39 +195,59 @@ header .intro-text .welcome {
     border: 0;
 }
 
-section {
-    padding: 100px 0;
-    background: transparent;
+@media(min-width:768px) {
+    .navbar-fixed-top {
+        padding: 25px 0;
+        transition: padding .3s;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        padding: 10px 0;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
 }
 
-section h2 {
-    margin: 0;
-    font-size: 3em;
-}
-
-section.success {
-    color: #fff;
-    background: #{{ site.color.primary }};
-}
-
+/* ---------------- Responsive ---------------- */
 @media(max-width:767px) {
     section {
         padding: 75px 0;
     }
-
-    section.first {
-        padding-top: 75px;
-    }
 }
 
-/*Overlay to make the sections stand out over the background */
-#about-me, #research, #teaching, #outreach {
-    /*background: rgba(0, 0, 0, 0.6); /* dark overlay */
+/* ---------------- About Me Carousel ---------------- */
+#aboutCarousel {
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+#aboutCarousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.about-text-box {
+    background-color: rgba({{ site.color.primary-rgb }}, 0.8);
+    padding: 20px 30px;
+    border-radius: 12px;
     color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
 }
--->
 
-/* Portfolio-like grid for Research/Teaching/Outreach */
+/* ---------------- Portfolio Grid ---------------- */
 .portfolio-flex-grid .portfolio-flex-row {
     display: flex;
     flex-flow: row wrap;
@@ -441,32 +259,22 @@ section.success {
 .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
     flex: 1 1 calc(33.33% - 30px);
     max-width: calc(33.33% - 30px);
-    margin: 0;
 }
 
-.portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    border-radius: 4px;
-}
-
-@media (max-width: 960px) {
+@media(max-width:960px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
         flex: 1 1 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
 }
 
-@media (max-width: 600px) {
+@media(max-width:600px) {
     .portfolio-flex-grid .portfolio-flex-row .portfolio-flex-item {
         flex: 1 1 100%;
         max-width: 100%;
     }
 }
 
-/* Hover overlay effect */
 .portfolio-item .portfolio-link {
     display: block;
     position: relative;
@@ -509,10 +317,10 @@ section.success {
     margin: 0;
 }
 
-/* Buttons and forms */
+/* ---------------- Buttons & Forms ---------------- */
 .btn-outline {
     margin-top: 15px;
-    border: solid 2px #fff;
+    border: 2px solid #fff;
     font-size: 20px;
     color: #fff;
     background: 0 0;
@@ -523,7 +331,7 @@ section.success {
 .btn-outline:focus,
 .btn-outline:active,
 .btn-outline.active {
-    border: solid 2px #fff;
+    border: 2px solid #fff;
     color: #{{ site.color.primary }};
     background: #fff;
 }
@@ -568,7 +376,7 @@ section.success {
     color: #{{ site.color.primary }};
 }
 
-/* Footer */
+/* ---------------- Footer ---------------- */
 footer {
     color: #fff;
 }
@@ -591,24 +399,7 @@ footer .footer-below {
     background-color: #{{ site.color.secondary-dark }};
 }
 
-.btn-social {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    border: 2px solid #fff;
-    border-radius: 100%;
-    text-align: center;
-    font-size: 20px;
-    line-height: 45px;
-}
-
-.btn:focus,
-.btn:active,
-.btn.active {
-    outline: 0;
-}
-
-/* Scroll top */
+/* ---------------- Scroll Top ---------------- */
 .scroll-top {
     z-index: 1049;
     position: fixed;
@@ -626,12 +417,11 @@ footer .footer-below {
     line-height: 28px;
 }
 
-/* Added after trying to debug scrolling issue*/
 .scroll-top .btn:focus {
     outline: 0;
 }
 
-/* Modals */
+/* ---------------- Modals ---------------- */
 .portfolio-modal .modal-content {
     padding: 100px 0;
     min-height: 100%;
@@ -639,8 +429,8 @@ footer .footer-below {
     border-radius: 0;
     text-align: center;
     box-shadow: none;
-    background-color: #{{ site.color.primary }}; /* modal background */
-    color: #fff; /* make all text inside white */
+    background-color: #{{ site.color.primary }};
+    color: #fff;
 }
 
 .portfolio-modal .modal-content h2 {
@@ -662,7 +452,7 @@ footer .footer-below {
     right: 25px;
     width: 75px;
     height: 75px;
-    background-color: transparent; 
+    background-color: transparent;
     cursor: pointer;
 }
 
@@ -687,33 +477,18 @@ footer .footer-below {
     transform: rotate(90deg);
 }
 
-.navbar-nav>.active>a {
-    background-color: #{{ site.color.secondary-dark }} !important;
-}
+/* ---------------- Responsive Header & Sections ---------------- */
+@media(min-width:768px){
+    header .container {
+        padding-top: 200px;
+        padding-bottom: 100px;
+    }
 
-/* Slideshow in About Me section */
-#aboutCarousel {
-  max-width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-}
+    header .intro-text .name {
+        font-size: 4.75em;
+    }
 
-#aboutCarousel img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-
-  /* 🔑 Remove any unwanted Bootstrap borders/boxes */
-  border: none !important;
-  box-shadow: none !important;
-  background: transparent !important;
-}
-
-.about-text-box {
-  background-color: rgba({{ site.color.primary-rgb }}, 0.8); /* secondary color, 80% opacity */
-  padding: 20px 30px;
-  border-radius: 12px;
-  color: #fff; /* ensure readability */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* optional: gives lift */
+    header .intro-text .welcome {
+        font-size: 1.75em;
+    }
 }
