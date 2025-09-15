@@ -8,9 +8,14 @@
 $(function() {
     $('.page-scroll a').bind('click', function(event) {
         var $anchor = $(this);
+
+        // Adjust scroll position so sections aren't hidden behind navbar
+        var offset = 70; // adjust if your navbar is taller/shorter
+
         $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
+            scrollTop: $($anchor.attr('href')).offset().top - offset
         }, 1500, 'easeInOutExpo');
+
         event.preventDefault();
     });
 });
@@ -28,8 +33,9 @@ $(function() {
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
-    target: '.navbar-fixed-top'
-})
+    target: '.navbar-fixed-top',
+    offset: 80 // keeps active state accurate with navbar offset
+});
 
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
