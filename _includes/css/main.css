@@ -121,6 +121,13 @@ h6 {
     font-weight: 700;
 }
 
+/* Added to normalize section size trying to debug nav issue*/
+section {
+    padding: 100px 0 !important; /* ensures all sections align under navbar */
+    position: relative;
+    z-index: 1;
+}
+
 .profile-pic-wrapper {
   width: 100%;
   max-width: 400px;       /* default for mobile/tablet */
