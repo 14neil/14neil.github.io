@@ -1,68 +1,58 @@
 /*!
- * Custom Freelancer JS
- * Based on Start Bootstrap - Freelancer
+ * Custom Freelancer.js
+ * Handles smooth scrolling, navbar collapse, and Scrollspy
  */
 
 (function($) {
   "use strict";
 
-  // -------------------------------
+  // -------------------------
   // Smooth scrolling with jQuery Easing
-  // -------------------------------
-  $(document).on('click', '.page-scroll a', function(event) {
+  // -------------------------
+  $(document).on("click", ".page-scroll a", function(event) {
     var $anchor = $(this);
-    var targetSelector = $anchor.attr('href');
+    var targetSelector = $anchor.attr("href");
+
+    // If the link is "#page-top", scroll to very top
+    if (targetSelector === "#page-top" || targetSelector === "#") {
+      $("html, body").stop().animate(
+        { scrollTop: 0 },
+        1500,
+        "easeInOutExpo"
+      );
+      event.preventDefault();
+      return;
+    }
+
+    // Scroll to the target section with offset for navbar
     var $target = $(targetSelector);
-
     if ($target.length) {
-      var navHeight = $('.navbar').outerHeight();
+      var navHeight = $(".navbar").outerHeight();
 
-      $('html, body').stop().animate({
-        scrollTop: $target.offset().top - navHeight
-      }, 1500, 'easeInOutExpo');
+      $("html, body").stop().animate(
+        {
+          scrollTop: $target.offset().top - navHeight
+        },
+        1500,
+        "easeInOutExpo"
+      );
+      event.preventDefault();
     }
-
-    event.preventDefault();
   });
 
-  // -------------------------------
-  // Floating label headings for forms
-  // -------------------------------
-  $("body")
-    .on("input propertychange", ".floating-label-form-group", function(e) {
-      $(this).toggleClass("floating-label-form-group-with-value", !!$(e.target).val());
-    })
-    .on("focus", ".floating-label-form-group", function() {
-      $(this).addClass("floating-label-form-group-with-focus");
-    })
-    .on("blur", ".floating-label-form-group", function() {
-      $(this).removeClass("floating-label-form-group-with-focus");
-    });
-
-  // -------------------------------
-  // Activate Scrollspy
-  // -------------------------------
-  $('body').scrollspy({
-    target: '.navbar',
-    offset: $('.navbar').outerHeight()
+  // -------------------------
+  // Highlight the top nav as scrolling occurs (Scrollspy)
+  // -------------------------
+  $("body").scrollspy({
+    target: ".navbar",
+    offset: $(".navbar").outerHeight() + 1
   });
 
-  // -------------------------------
-  // Closes the responsive menu on nav item click
-  // -------------------------------
-  $(document).on('click', '.navbar-collapse ul li a', function() {
-    $('.navbar-toggle:visible').click();
-  });
-
-  // -------------------------------
-  // Shrink navbar on scroll
-  // -------------------------------
-  $(window).on('scroll', function() {
-    if ($(".navbar").offset().top > 50) {
-      $(".navbar").addClass("navbar-shrink");
-    } else {
-      $(".navbar").removeClass("navbar-shrink");
-    }
+  // -------------------------
+  // Closes the Responsive Menu on Menu Item Click
+  // -------------------------
+  $(".navbar-collapse ul li a").click(function() {
+    $(".navbar-toggle:visible").click();
   });
 
 })(jQuery);
