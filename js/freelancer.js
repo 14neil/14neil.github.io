@@ -29,7 +29,7 @@ $(function() {
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({
     target: '.navbar-fixed-top',
-    offset: 51  // fixes the highlight issue for About/Portfolio sections
+    offset: 70  // fixes the highlight issue for About/Portfolio sections
 });
 
 // Closes the Responsive Menu on Menu Item Click
