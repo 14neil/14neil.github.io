@@ -26,7 +26,7 @@ body {
     #teaching,
     #outreach {
         /* REVISION: Changed from transparent to a semi-opaque background */
-        background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+        background: transparent;
         color: #fff;
     }
 }
@@ -395,12 +395,6 @@ header .intro-text .welcome {
 }
 
 /* ---------------- Sections ---------------- */
-
-section {
-    /* Your existing styles... */
-    border: 2px solid red !important; /* Temporary border for debugging */
-}
-
 section {
     padding: 100px 0;
     background: transparent;
