@@ -9,5 +9,5 @@ project-date: Fall 2023, 2024
 organizers: Claire-Marie Kooi, 	Alison Schopmeyer
 credits: MPS
 category: outreach
-description: I served as a mentor for UC Berkeley's Mathematical and Physical Science (MPS) Mentoring Program from Fall 2022 to Spring 2024. Alongside my co-mentor and friend Elma Chuang (pictured TOP LEFT), the MPS mentoring program matched us with several 1st/2nd year undergraduate students mentees. We were tasked with helping navigate their personal academic journey through building social networks, presenting research and scholarship opportunities, and career path planning. 
+description: "I served as a mentor for UC Berkeley's Mathematical and Physical Science (MPS) Mentoring Program from Fall 2022 to Spring 2024. Alongside my co-mentor and friend Elma Chuang (pictured TOP LEFT), the MPS mentoring program matched us with several 1st/2nd year undergraduate students mentees. We were tasked with helping navigate their personal academic journey through building social networks, presenting research and scholarship opportunities, and career path planning."
 ---
