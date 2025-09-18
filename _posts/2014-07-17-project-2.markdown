@@ -3,7 +3,7 @@ layout: default
 title: Tidal Disruption Events
 modal-id: 2
 date: 2014-07-17
-img: tde_draw.webp
+img: 15oi_opac90.webp
 alt: 15oi_LC.webp
 advisors: Raffaella Margutti, Ryan  Chornock
 credits: Lixin Dai et al 2018, Neil Gehrels Swift Observatory
