@@ -16,11 +16,14 @@ body {
 /* ---------------- Desktop: Parallax Background ---------------- */
 @media (min-width: 768px) {
     body {
+        /*
         background-image: url('/img/background_95opac.webp');
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed; /* parallax effect */
-        background-position: center center;
+        /*
+        background-position: center center; 
+        */
     }
 
     /* Sections float over parallax background */
