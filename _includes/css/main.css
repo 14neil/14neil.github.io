@@ -402,6 +402,12 @@ header .intro-text .welcome {
 }
 
 /* ---------------- Sections ---------------- */
+
+section {
+    /* Your existing styles... */
+    border: 2px solid red !important; /* Temporary border for debugging */
+}
+
 section {
     padding: 100px 0;
     background: transparent;
