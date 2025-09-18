@@ -695,22 +695,25 @@ footer .footer-below {
 }
 
 /* ---------------- Slideshow in About Me Section ---------------- */
+/*
 #aboutCarousel {
     max-width: 100%;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
-
+*/
+/*
 #aboutCarousel img {
     width: 100%;
     height: auto;
     object-fit: cover; /* Remove any unwanted Bootstrap borders/boxes */
+/*
     border: none !important;
     box-shadow: none !important;
     background: transparent !important;
 }
-
+*/
 .about-text-box {
     background-color: rgba({{ site.color.primary-rgb }}, 0.8); /* secondary color, 80% opacity */
     padding: 20px 30px;
