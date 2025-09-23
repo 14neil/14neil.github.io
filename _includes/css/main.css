@@ -336,6 +336,10 @@ header .intro-text .welcome {
     font-weight: 300;
 }
 
+.contact-line {
+  color: site.color.gold; /* pick any color you want */
+}
+
 /* ---------------- Desktop Header Adjustments ---------------- */
 @media (min-width: 768px) {
     header .container {
