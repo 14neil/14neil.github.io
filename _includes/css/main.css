@@ -343,7 +343,6 @@ header .intro-text .welcome {
 
 .github-link {
   color: #FFD700;              /* gold/yellow so it stands out */
-  font-weight: bold;           /* optional */
   text-decoration: none;       /* remove underline */
 }
 
