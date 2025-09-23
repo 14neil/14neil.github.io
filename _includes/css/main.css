@@ -337,7 +337,8 @@ header .intro-text .welcome {
 }
 
 .contact-line {
-  color: #{{ site.color.gold }}; !important/* pick any color you want */
+  color: #FFD700 !important; /* pick any color */
+  font-weight: bold;         /* optional */
 }
 
 /* ---------------- Desktop Header Adjustments ---------------- */
