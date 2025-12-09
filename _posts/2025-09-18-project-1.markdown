@@ -11,5 +11,6 @@ category: research
 description: "Supernovae are the final stages of a massive star's stellar life cycle and can be observed as new, bright objects in a galaxy. Analysis of a supernova's chemical abundance sometimes reveals that the outer envelope of the progenitor was stripped from the star prior to explosion; these are classified as stripped-envelope supernovae. The cover highlights the host galaxy of supernova (SN) 2021ukt prior to and after the supernova's explosion. Direct observational analysis reveals interaction between the helium-rich ejected outer envelope and a hydrogen-rich circumstellar shell."
 links: |
   arXiv: https://arxiv.org/abs/2511.22923
+  
   Phys.org: https://phys.org/news/2025-12-peculiar-supernova-sn-2021ukt-transitions.html
 ---
